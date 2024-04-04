@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#051E42">
+
+    <!-- Image View to cover 30% of the screen from the top -->
+    <ImageView
+        android:id="@+id/topImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/night_sky_background"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Night_Sky_Background" />
+
+    <!-- TextView to display "GHUM" aligned to the right -->
+    <TextView
+        android:id="@+id/textGhum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="GHUM"
+        android:textColor="#FFD700"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <!-- TextView to display "For Better Sleep" below "GHUM" aligned to the right -->
+    <TextView
+        android:id="@+id/textBetterSleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textGhum"
+        android:layout_alignEnd="@id/textGhum"
+        android:paddingStart="24dp"
+        android:paddingEnd="0dp"
+        android:layout_marginTop="8dp"
+        android:text="For Better Sleep"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+
+
+    <!-- ScrollView containing ambient sounds -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textBetterSleep"
+        android:layout_above="@id/stream"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="5dp">
+
+        <!-- Layout to hold list of sounds -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- First category of tunes -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category 1"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Circular icons representing tunes -->
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_stream"
+                    android:background="@drawable/circular_background"
+                    android:layout_margin="8dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_stream"
+                    android:background="@drawable/circular_background"
+                    android:layout_margin="8dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_stream"
+                    android:background="@drawable/circular_background"
+                    android:layout_margin="8dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_stream"
+                    android:background="@drawable/circular_background"
+                    android:layout_margin="8dp"/>
+
+                <!-- Add more icons as needed -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Song 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Song 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Song 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Song 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <!-- Add more names as needed -->
+            </LinearLayout>
+
+            <!-- Second category of tunes -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category 2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Circular icons representing tunes -->
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_stream"
+                    android:background="@drawable/circular_background"
+                    android:layout_margin="8dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_stream"
+                    android:background="@drawable/circular_background"
+                    android:layout_margin="8dp"/>
+
+                <!-- Add more icons as needed -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Song 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingLeft="25dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Song 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingLeft="43dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <!-- Add more names as needed -->
+            </LinearLayout>
+
+            <!-- Third category of tunes -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category 3"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Circular icons representing tunes -->
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_stream"
+                    android:background="@drawable/circular_background"
+                    android:layout_margin="8dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_stream"
+                    android:background="@drawable/circular_background"
+                    android:layout_margin="8dp"/>
+
+                <!-- Add more icons as needed -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Song 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingLeft="25dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Song 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingLeft="43dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <!-- Add more names as needed -->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- Bottom margin to control the height of the ScrollView -->
+    <Space
+        android:id="@+id/bottomMargin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="0.78" />
+
+    <ImageView
+        android:id="@+id/sounds"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/bottomMargin"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/ic_sounds" />
+
+    <ImageView
+        android:id="@+id/stream"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_above="@+id/bottomMargin"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="15dp"
+        app:srcCompat="@drawable/ic_stream" />
+
+    <ImageView
+        android:id="@+id/tokens"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/ic_custom_tokens" />
+
+    <ImageView
+        android:id="@+id/Menu_bar"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/menu" />
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#051E42">
+
+    <!-- Image View to cover 30% of the screen from the top -->
+    <ImageView
+        android:id="@+id/topImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/night_sky_background"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Night_Sky_Background" />
+
+    <!-- TextView to display "GHUM" aligned to the right -->
+    <TextView
+        android:id="@+id/textGhum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="GHUM"
+        android:textColor="#FFD700"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <!-- TextView to display "For Better Sleep" below "GHUM" aligned to the right -->
+    <TextView
+        android:id="@+id/textBetterSleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textGhum"
+        android:layout_alignEnd="@id/textGhum"
+        android:paddingStart="24dp"
+        android:paddingEnd="0dp"
+        android:layout_marginTop="8dp"
+        android:text="For Better Sleep"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <!-- Bottom margin to control the height of the ScrollView -->
+    <Space
+        android:id="@+id/bottomMargin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="0.78" />
+
+    <ImageView
+        android:id="@+id/sounds"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/bottomMargin"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/ic_sounds" />
+
+    <ImageView
+        android:id="@+id/stream"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_above="@+id/bottomMargin"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="15dp"
+        app:srcCompat="@drawable/ic_stream" />
+
+    <ImageView
+        android:id="@+id/tokens"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/ic_custom_tokens" />
+
+    <ImageView
+        android:id="@+id/Menu_bar"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/menu" />
+
+</RelativeLayout>
