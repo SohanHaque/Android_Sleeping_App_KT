@@ -64,7 +64,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Category 1"
+                android:text="Base"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -79,23 +79,29 @@
 
                 <!-- Circular icons representing tunes -->
                 <ImageView
+                    android:id="@+id/mildRainSound"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/ic_stream"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mild_rain_image"
                     android:background="@drawable/circular_background"
                     android:layout_margin="8dp"/>
 
                 <ImageView
+                    android:id="@+id/heavyRainSound"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/ic_stream"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/heavy_rain_image"
                     android:background="@drawable/circular_background"
                     android:layout_margin="8dp"/>
 
                 <ImageView
+                    android:id="@+id/howlingWindSound"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/ic_stream"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/howling_wind_image"
                     android:background="@drawable/circular_background"
                     android:layout_margin="8dp"/>
 
@@ -118,30 +124,30 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Song 1"
+                    android:text="Mild Rain"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp"
-                    android:paddingLeft="25dp"
+                    android:paddingLeft="7dp"
                     android:paddingRight="20dp"
                     android:layout_gravity="center_horizontal"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Song 1"
+                    android:text="Heavy Rain"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp"
-                    android:paddingLeft="25dp"
+                    android:paddingLeft="5dp"
                     android:paddingRight="25dp"
                     android:layout_gravity="center_horizontal"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Song 1"
+                    android:text="Wind"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="10dp"
                     android:paddingRight="20dp"
                     android:layout_gravity="center_horizontal"/>
 
@@ -162,7 +168,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Category 2"
+                android:text="Effects"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -224,7 +230,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Category 3"
+                android:text="Special"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold"

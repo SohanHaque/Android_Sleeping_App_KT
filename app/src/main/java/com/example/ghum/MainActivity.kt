@@ -1,6 +1,8 @@
 package com.example.ghum
 
 import android.content.Intent
+import android.graphics.drawable.BitmapDrawable
+import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.util.DisplayMetrics
@@ -11,10 +13,12 @@ import android.widget.PopupWindow
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 
 class MainActivity : AppCompatActivity() {
     private var popupWindow: PopupWindow? = null
     private var menuBarClickedCount: Int = 0
+    private var mediaPlayer: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +28,21 @@ class MainActivity : AppCompatActivity() {
         val sounds = findViewById<ImageView>(R.id.sounds)
         val stream = findViewById<ImageView>(R.id.stream)
         val menuBar = findViewById<View>(R.id.Menu_bar)
+        val mildRainSound = findViewById<ImageView>(R.id.mildRainSound)
+        val bitmap = (mildRainSound.drawable as BitmapDrawable).bitmap
+        val roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(resources, bitmap)
+        roundedBitmapDrawable.isCircular = true
+        mildRainSound.setImageDrawable(roundedBitmapDrawable)
+        val heavyRainSound = findViewById<ImageView>(R.id.heavyRainSound)
+        val bitmapHeavyRain = (heavyRainSound.drawable as BitmapDrawable).bitmap
+        val roundedBitmapDrawableHeavyRain = RoundedBitmapDrawableFactory.create(resources, bitmapHeavyRain)
+        roundedBitmapDrawableHeavyRain.isCircular = true
+        heavyRainSound.setImageDrawable(roundedBitmapDrawableHeavyRain)
+        val howlingWindSound = findViewById<ImageView>(R.id.howlingWindSound)
+        val bitmapHowlingWind = (howlingWindSound.drawable as BitmapDrawable).bitmap
+        val roundedBitmapDrawableHowlingWind = RoundedBitmapDrawableFactory.create(resources, bitmapHowlingWind)
+        roundedBitmapDrawableHowlingWind.isCircular = true
+        howlingWindSound.setImageDrawable(roundedBitmapDrawableHowlingWind)
 
         sounds.setOnClickListener {
             Toast.makeText(this, "You are in the sounds page!", Toast.LENGTH_SHORT).show()
@@ -80,6 +99,17 @@ class MainActivity : AppCompatActivity() {
                 // Finally, show the popup window
                 popupWindow?.showAsDropDown(menuBar, 0, 0, Gravity.START)
             }
+        }
+
+        // Set click listener for Sounds
+        mildRainSound.setOnClickListener {
+            handleSound(R.raw.mild_rain_sound)
+        }
+        heavyRainSound.setOnClickListener {
+            handleSound(R.raw.heavy_rain_sound)
+        }
+        howlingWindSound.setOnClickListener {
+            handleSound(R.raw.howling_wind_sound)
         }
 
         // Hide the status bar and navigation bar
@@ -139,5 +169,15 @@ class MainActivity : AppCompatActivity() {
             display?.getMetrics(displayMetrics)
         }
         return displayMetrics.heightPixels
+    }
+
+    private fun handleSound(soundResource: Int) {
+        if (mediaPlayer != null) {
+            mediaPlayer?.stop()
+            mediaPlayer?.release()
+            mediaPlayer = null
+        }
+        mediaPlayer = MediaPlayer.create(this, soundResource)
+        mediaPlayer?.start()
     }
 }
